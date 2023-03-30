@@ -5,8 +5,8 @@ function T = CreateDatabase(TrainDatabasePath)
 TrainFiles = dir(TrainDatabasePath);
 Train_Number = 0;
 
-for i = 1:size(TrainFiles,1)
-    if not(strcmp(TrainFiles(i).name,'.')|strcmp(TrainFiles(i).name,'..')|strcmp(TrainFiles(i).name,'Thumbs.db'))
+for j = 1:size(TrainFiles,1)
+    if not(strcmp(TrainFiles(j).name,'.')|strcmp(TrainFiles(j).name,'..')|strcmp(TrainFiles(j).name,'Thumbs.db'))
         Train_Number = Train_Number + 1; % Number of all images in the training database
     end
 end

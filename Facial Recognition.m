@@ -2,8 +2,8 @@ function OutputName = Recognition(TestImage, m, A, Eigenfaces)
 
 ProjectedImages = [];
 Train_Number = size(Eigenfaces,2);
-for i = 1 : Train_Number
-    temp = Eigenfaces'*A(:,i); % Projection of centered images into facespace
+for j = 1 : Train_Number
+    temp = Eigenfaces'*A(:,j); % Projection of centered images into facespace
     ProjectedImages = [ProjectedImages temp]; 
 end
 
