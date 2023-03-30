@@ -13,9 +13,9 @@ L = A'*A; % L is the surrogate of covariance matrix C=A*A'.
 [V D] = eig(L); % Diagonal elements of D are the eigenvalues for both L=A'*A and C=A*A'.
 
 L_eig_vec = [];
-for i = 1 : size(V,2) 
-    if( D(i,i)>1 )
-        L_eig_vec = [L_eig_vec V(:,i)];
+for j = 1 : size(V,2) 
+    if( D(j,j)>1 )
+        L_eig_vec = [L_eig_vec V(:,j)];
     end
 end
 
